@@ -8,10 +8,6 @@ api = tweepy.API(auth)
 query='bitcoin OR crypto'
 user_tweets = api.search(q=query)
 
-#for status in tweepy.Cursor(api.user_timeline('naval')).items():
-#    # process status here
-#    process_status(status)
-
 for tweet in user_tweets:
     print(tweet.text)
     analysis = TextBlob(tweet.text)
